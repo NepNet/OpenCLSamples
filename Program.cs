@@ -6,7 +6,7 @@ namespace OpenCLSamples
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			AddArrays.Add();
 		}
 	}
 }
