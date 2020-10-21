@@ -62,6 +62,15 @@ namespace OpenCLSamples
 			{
 				Console.WriteLine(f);
 			}
+
+
+			CL.ReleaseMemoryObject(bufferA);
+			CL.ReleaseMemoryObject(bufferB);
+			CL.ReleaseMemoryObject(outputBuffer);
+			CL.ReleaseCommandQueue(queue);
+			CL.ReleaseKernel(kernel);
+			CL.ReleaseProgram(program);
+			CL.ReleaseContext(context);
 		}
 	}
 }
