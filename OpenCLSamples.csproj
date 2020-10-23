@@ -8,7 +8,6 @@
 	<ItemGroup>
 	  <PackageReference Include="OpenTK" Version="4.0.2" />
 	  <PackageReference Include="OpenTK.Compute" Version="4.0.2" />
-	  <PackageReference Include="SixLabors.ImageSharp" Version="1.0.1" />
 	  <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
 	  <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
 	</ItemGroup>

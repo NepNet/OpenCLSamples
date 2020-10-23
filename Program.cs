@@ -6,7 +6,9 @@ namespace OpenCLSamples
 	{
 		static void Main(string[] args)
 		{
-			AddArrays.Add();
+			//BezierThing.ProcessCurve();
+			Grayscale.ConvertToGrayscale("image.jpg");
+			//AddArrays.Add();
 		}
 	}
 }

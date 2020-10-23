@@ -2,10 +2,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Runtime.InteropServices;
 using OpenTK.Compute.OpenCL;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 using ImageFormat = OpenTK.Compute.OpenCL.ImageFormat;
 using Rectangle = System.Drawing.Rectangle;
 
@@ -106,6 +103,18 @@ namespace OpenCLSamples
 			outputBitmap.UnlockBits(outputData);
 			
 			outputBitmap.Save("grayscale.png", System.Drawing.Imaging.ImageFormat.Png);
+			
+			//Dispose of all things
+			inputBitmap.Dispose();
+			outputBitmap.Dispose();
+
+			CL.ReleaseMemoryObject(inputImage);
+			CL.ReleaseMemoryObject(outputImage);
+			
+			CL.ReleaseCommandQueue(queue);
+			CL.ReleaseKernel(kernel);
+			CL.ReleaseProgram(program);
+			CL.ReleaseContext(context);
 		}
 	}
 }
